@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras - Nome da Loja</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="bg-primary text-white text-center py-5">
+        <h1>Seu Carrinho de Compras</h1>
+    </header>
+
+    <div class="container my-5">
+        <h2>Produtos no Carrinho</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Produto</th>
+                    <th scope="col">Quantidade</th>
+                    <th scope="col">Preço</th>
+                    <th scope="col">Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Produto 1</td>
+                    <td>
+                        <input type="number" value="1" class="form-control" style="width: 60px;">
+                    </td>
+                    <td>R$ 29,99</td>
+                    <td>
+                        <button class="btn btn-danger" data-toggle="modal" data-target="#removeModal">Remover</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Produto 2</td>
+                    <td>
+                        <input type="number" value="2" class="form-control" style="width: 60px;">
+                    </td>
+                    <td>R$ 49,99</td>
+                    <td>
+                        <button class="btn btn-danger" data-toggle="modal" data-target="#removeModal">Remover</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h4>Total: R$ 129,97</h4>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#checkoutModal">Finalizar Compra</button>
+    </div>
+
+    <!-- Modal de Remoção -->
+    <div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="removeModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="removeModalLabel">Remover Produto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Você tem certeza que deseja remover este produto do carrinho?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger">Remover</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Finalização de Compra -->
+    <div class="modal fade" id="checkoutModal" tabindex="-1" role="dialog" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="checkoutModalLabel">Finalizar Compra</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Obrigado pela sua compra! Você receberá um e-mail de confirmação em breve.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-primary text-white text-center py-4">
+        <p>&copy; 2023 Nome da Loja. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
